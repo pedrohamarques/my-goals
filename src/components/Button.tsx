@@ -1,8 +1,11 @@
-import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native"
+import React from "react";
+import { Text, TouchableOpacity } from "react-native";
+
+import type { TouchableOpacityProps } from "react-native";
 
 type Props = TouchableOpacityProps & {
-  title: string
-}
+  title: string;
+};
 
 export function Button({ title, ...rest }: Props) {
   return (
@@ -15,5 +18,5 @@ export function Button({ title, ...rest }: Props) {
         {title}
       </Text>
     </TouchableOpacity>
-  )
+  );
 }

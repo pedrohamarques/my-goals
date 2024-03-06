@@ -1,20 +1,23 @@
-import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native"
+import React from "react";
+import { Text, TouchableOpacity } from "react-native";
 
-import { Progress } from "@/components/Progress"
-import { currencyFormat } from "@/utils/currencyFormat"
+import { Progress } from "@/components";
+import { currencyFormat } from "@/utils/currencyFormat";
+
+import type { TouchableOpacityProps } from "react-native";
 
 export type GoalProps = {
-  name: string
-  current: number
-  total: number
-}
+  name: string;
+  current: number;
+  total: number;
+};
 
 type Props = TouchableOpacityProps & {
-  goal: GoalProps
-}
+  goal: GoalProps;
+};
 
 export function Goal({ goal, ...rest }: Props) {
-  const percentage = (goal.current / goal.total) * 100
+  const percentage = (goal.current / goal.total) * 100;
 
   return (
     <TouchableOpacity
@@ -34,5 +37,5 @@ export function Goal({ goal, ...rest }: Props) {
 
       <Progress percentage={percentage} />
     </TouchableOpacity>
-  )
+  );
 }

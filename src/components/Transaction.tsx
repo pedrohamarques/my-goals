@@ -1,16 +1,19 @@
-import { Pressable, PressableProps, Text } from "react-native"
+import React from "react";
+import { Pressable, Text } from "react-native";
 
-import { currencyFormat } from "@/utils/currencyFormat"
-import { colors } from "@/styles/colors"
+import { currencyFormat } from "@/utils/currencyFormat";
+import { colors } from "@/styles/colors";
+
+import type { PressableProps } from "react-native";
 
 export type TransactionProps = {
-  date: string
-  amount: number
-}
+  date: string;
+  amount: number;
+};
 
 type Props = PressableProps & {
-  transaction: TransactionProps
-}
+  transaction: TransactionProps;
+};
 
 export function Transaction({ transaction, ...rest }: Props) {
   return (
@@ -32,5 +35,5 @@ export function Transaction({ transaction, ...rest }: Props) {
         {transaction.date}
       </Text>
     </Pressable>
-  )
+  );
 }

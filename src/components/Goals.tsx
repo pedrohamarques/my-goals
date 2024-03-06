@@ -1,21 +1,22 @@
-import { ScrollView, TouchableOpacity } from "react-native"
-import MaterialIcons from "@expo/vector-icons/MaterialIcons"
+import React from "react";
+import { ScrollView, TouchableOpacity } from "react-native";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
-import { Goal } from "@/components/Goal"
-import { colors } from "@/styles/colors"
+import { Goal } from "@/components";
+import { colors } from "@/styles/colors";
 
 export type GoalsProps = {
-  id: string
-  name: string
-  current: number
-  total: number
-}[]
+  id: string;
+  name: string;
+  current: number;
+  total: number;
+}[];
 
 type Props = {
-  goals: GoalsProps
-  onPress: (id: string) => void
-  onAdd: () => void
-}
+  goals: GoalsProps;
+  onPress: (id: string) => void;
+  onAdd: () => void;
+};
 
 export function Goals({ goals, onAdd, onPress }: Props) {
   return (
@@ -41,5 +42,5 @@ export function Goals({ goals, onAdd, onPress }: Props) {
         />
       ))}
     </ScrollView>
-  )
+  );
 }

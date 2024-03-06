@@ -1,12 +1,15 @@
-import { FlatList, Text, View } from "react-native"
+import React from "react";
+import { FlatList, Text, View } from "react-native";
 
-import { Transaction, TransactionProps } from "@/components/Transaction"
+import { Transaction } from "@/components";
 
-export type TransactionsProps = TransactionProps[]
+import type { TransactionProps } from "./Transaction";
+
+export type TransactionsProps = TransactionProps[];
 
 type Props = {
-  transactions: TransactionsProps
-}
+  transactions: TransactionsProps;
+};
 
 export function Transactions({ transactions }: Props) {
   return (
@@ -27,5 +30,5 @@ export function Transactions({ transactions }: Props) {
         )}
       />
     </View>
-  )
+  );
 }

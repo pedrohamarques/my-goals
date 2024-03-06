@@ -1,9 +1,10 @@
-import { View, Text } from "react-native"
+import React from "react";
+import { View, Text } from "react-native";
 
 type Props = {
-  title: string
-  subtitle: string
-}
+  title: string;
+  subtitle: string;
+};
 
 export function Header({ title, subtitle }: Props) {
   return (
@@ -11,5 +12,5 @@ export function Header({ title, subtitle }: Props) {
       <Text className="text-white font-bold text-4xl">{title}</Text>
       <Text className="text-white font-regular text-lg">{subtitle}</Text>
     </View>
-  )
+  );
 }

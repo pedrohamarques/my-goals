@@ -1,12 +1,13 @@
-import { Text, View } from "react-native"
+import React from "react";
+import { Text, View } from "react-native";
 
 type Props = {
-  percentage: number
-}
+  percentage: number;
+};
 
 export function Progress({ percentage }: Props) {
-  const width = percentage > 100 ? 100 : percentage
-  const value = percentage.toFixed(0) + "%"
+  const width = percentage > 100 ? 100 : percentage;
+  const value = percentage.toFixed(0) + "%";
 
   return (
     <View className="w-full h-7 rounded-full bg-gray-400 overflow-hidden flex-row items-center">
@@ -23,5 +24,5 @@ export function Progress({ percentage }: Props) {
         <Text className="text-white text-xs font-semiBold mx-5">{value}</Text>
       )}
     </View>
-  )
+  );
 }

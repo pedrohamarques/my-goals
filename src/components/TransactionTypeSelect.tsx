@@ -1,14 +1,15 @@
-import { View } from "react-native"
+import React from "react";
+import { View } from "react-native";
 
-import { colors } from "@/styles/colors"
-import { TransactionType } from "@/components/TransactionType"
+import { colors } from "@/styles/colors";
+import { TransactionType } from "@/components";
 
-type TransactionType = "up" | "down"
+type TransactionType = "up" | "down";
 
 type Props = {
-  selected: TransactionType
-  onChange: (type: TransactionType) => void
-}
+  selected: TransactionType;
+  onChange: (type: TransactionType) => void;
+};
 
 export function TransactionTypeSelect({ selected, onChange }: Props) {
   return (
@@ -33,5 +34,5 @@ export function TransactionTypeSelect({ selected, onChange }: Props) {
         onPress={() => onChange("down")}
       />
     </View>
-  )
+  );
 }

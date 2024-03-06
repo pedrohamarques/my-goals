@@ -1,16 +1,19 @@
-import { Text, ColorValue, Pressable, PressableProps } from "react-native"
-import MaterialIcons from "@expo/vector-icons/MaterialIcons"
+import React from "react";
+import { Text, ColorValue, Pressable } from "react-native";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+
+import type { PressableProps } from "react-native";
 
 type TransactionTypeProps = {
-  title: string
-  icon: keyof typeof MaterialIcons.glyphMap
-  color: ColorValue
-  selected: boolean
-}
+  title: string;
+  icon: keyof typeof MaterialIcons.glyphMap;
+  color: ColorValue;
+  selected: boolean;
+};
 
 type Props = PressableProps & {
-  type: TransactionTypeProps
-}
+  type: TransactionTypeProps;
+};
 
 export function TransactionType({ type, ...rest }: Props) {
   return (
@@ -22,5 +25,5 @@ export function TransactionType({ type, ...rest }: Props) {
       <MaterialIcons name={type.icon} color={type.color} size={16} />
       <Text className="text-white font-semiBold text-sm">{type.title}</Text>
     </Pressable>
-  )
+  );
 }

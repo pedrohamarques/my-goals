@@ -1,16 +1,16 @@
-import React, { ReactNode, forwardRef } from "react"
-import { Text, View } from "react-native"
-import Bottom from "@gorhom/bottom-sheet"
-import MaterialIcons from "@expo/vector-icons/MaterialIcons"
+import React, { ReactNode, forwardRef } from "react";
+import { Text, View } from "react-native";
+import Bottom from "@gorhom/bottom-sheet";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
-import { colors } from "@/styles/colors"
+import { colors } from "@/styles/colors";
 
 export type Props = {
-  onClose: () => void
-  title: string
-  children: ReactNode
-  snapPoints: number[]
-}
+  onClose: () => void;
+  title: string;
+  children: ReactNode;
+  snapPoints: number[];
+};
 
 export const BottomSheet = forwardRef<Bottom, Props>(
   ({ onClose, children, snapPoints, title }, ref) => {
@@ -43,6 +43,6 @@ export const BottomSheet = forwardRef<Bottom, Props>(
           {children}
         </View>
       </Bottom>
-    )
-  }
-)
+    );
+  },
+);
