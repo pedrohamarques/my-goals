@@ -12,6 +12,7 @@ export type Props = {
   snapPoints: number[];
 };
 
+// eslint-disable-next-line react/display-name
 export const BottomSheet = forwardRef<Bottom, Props>(
   ({ onClose, children, snapPoints, title }, ref) => {
     return (
