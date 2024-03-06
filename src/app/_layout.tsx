@@ -1,6 +1,7 @@
 import "@/libs/dayjs";
 import "@/styles/global.css";
 
+import React from "react";
 import { Slot } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";

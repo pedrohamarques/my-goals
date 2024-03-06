@@ -4,8 +4,8 @@ import { router } from "expo-router";
 import Bottom from "@gorhom/bottom-sheet";
 import dayjs from "dayjs";
 
-import type { GoalsProps } from "@/components/Goals";
-import type { TransactionsProps } from "@/components/Transactions";
+import type { GoalsProps } from "@/components/Goals/Goals";
+import type { TransactionsProps } from "@/components/Transactions/Transactions";
 
 import { mocks } from "@/utils/mocks";
 

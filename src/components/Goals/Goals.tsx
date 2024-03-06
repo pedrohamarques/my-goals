@@ -2,7 +2,7 @@ import React from "react";
 import { ScrollView, TouchableOpacity } from "react-native";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
-import { Goal } from "@/components";
+import { Goal } from "./components";
 import { colors } from "@/styles/colors";
 
 export type GoalsProps = {

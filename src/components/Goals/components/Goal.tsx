@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, TouchableOpacity } from "react-native";
 
-import { Progress } from "@/components";
+import { Progress } from "./Progress";
 import { currencyFormat } from "@/utils/currencyFormat";
 
 import type { TouchableOpacityProps } from "react-native";

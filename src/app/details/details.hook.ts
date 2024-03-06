@@ -4,7 +4,7 @@ import Bottom from "@gorhom/bottom-sheet";
 import dayjs from "dayjs";
 import { router, useLocalSearchParams } from "expo-router";
 
-import type { TransactionProps } from "@/components/Transaction";
+import type { TransactionProps } from "@/components/Transactions/components/Transaction";
 
 import { mocks } from "@/utils/mocks";
 import { currencyFormat } from "@/utils/currencyFormat";

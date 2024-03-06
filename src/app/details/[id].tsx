@@ -1,15 +1,17 @@
 import React from "react";
 import { View } from "react-native";
 
-import { Input } from "@/components/Input";
-import { Header } from "@/components/Header";
-import { Button } from "@/components/Button";
-import { Loading } from "@/components/Loading";
-import { Progress } from "@/components/Progress";
-import { BackButton } from "@/components/BackButton";
-import { BottomSheet } from "@/components/BottomSheet";
-import { Transactions } from "@/components/Transactions";
-import { TransactionTypeSelect } from "@/components/TransactionTypeSelect";
+import {
+  Input,
+  Header,
+  Loading,
+  BackButton,
+  Transactions,
+  BottomSheet,
+  Button,
+  TransactionTypeSelect,
+} from "@/components";
+import { Progress } from "@/components/Goals/components";
 
 import { useDetails } from "./details.hook";
 

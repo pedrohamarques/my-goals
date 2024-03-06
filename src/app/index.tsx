@@ -1,12 +1,14 @@
 import React from "react";
 import { View } from "react-native";
 
-import { Input } from "@/components/Input";
-import { Header } from "@/components/Header";
-import { Button } from "@/components/Button";
-import { BottomSheet } from "@/components/BottomSheet";
-import { Goals } from "@/components/Goals";
-import { Transactions } from "@/components/Transactions";
+import {
+  Input,
+  Header,
+  Goals,
+  Transactions,
+  BottomSheet,
+  Button,
+} from "@/components";
 
 import { useHome } from "./home.hook";
 

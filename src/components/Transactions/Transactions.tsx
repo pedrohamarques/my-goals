@@ -1,9 +1,9 @@
 import React from "react";
 import { FlatList, Text, View } from "react-native";
 
-import { Transaction } from "@/components";
+import { Transaction } from "./components";
 
-import type { TransactionProps } from "./Transaction";
+import type { TransactionProps } from "./components/Transaction";
 
 export type TransactionsProps = TransactionProps[];
 
