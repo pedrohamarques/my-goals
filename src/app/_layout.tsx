@@ -1,33 +1,33 @@
-import "@/libs/dayjs"
-import "@/styles/global.css"
+import "@/libs/dayjs";
+import "@/styles/global.css";
 
-import { Slot } from "expo-router"
-import { StatusBar } from "expo-status-bar"
-import * as SplashScreen from "expo-splash-screen"
-import { GestureHandlerRootView } from "react-native-gesture-handler"
+import { Slot } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import * as SplashScreen from "expo-splash-screen";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import {
   useFonts,
   OpenSans_700Bold,
   OpenSans_400Regular,
   OpenSans_600SemiBold,
-} from "@expo-google-fonts/open-sans"
+} from "@expo-google-fonts/open-sans";
 
-import { colors } from "@/styles/colors"
+import { colors } from "@/styles/colors";
 
-SplashScreen.preventAutoHideAsync()
+SplashScreen.preventAutoHideAsync();
 
 export default function Layout() {
   const [fontsLoaded] = useFonts({
     OpenSans_600SemiBold,
     OpenSans_400Regular,
     OpenSans_700Bold,
-  })
+  });
 
   if (fontsLoaded) {
-    SplashScreen.hideAsync()
+    SplashScreen.hideAsync();
   } else {
-    return
+    return;
   }
 
   return (
@@ -37,5 +37,5 @@ export default function Layout() {
       <StatusBar style="light" />
       <Slot />
     </GestureHandlerRootView>
-  )
+  );
 }

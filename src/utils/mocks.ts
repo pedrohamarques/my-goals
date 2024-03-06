@@ -1,5 +1,5 @@
-import dayjs from "dayjs"
-import { currencyFormat } from "./currencyFormat"
+import dayjs from "dayjs";
+import { currencyFormat } from "./currencyFormat";
 
 const transactions = [
   {
@@ -12,7 +12,7 @@ const transactions = [
     created_at: dayjs(new Date()).format("DD/MM/YYYY [às] HH:mm"),
     amount: -90,
   },
-]
+];
 
 const goal = {
   id: "1",
@@ -21,12 +21,12 @@ const goal = {
   total: 3000,
   percentage: (2500 / 3000) * 100,
   transactions,
-}
+};
 
-const goals = [goal]
+const goals = [goal];
 
 export const mocks = {
   goal,
   goals,
   transactions,
-}
+};
