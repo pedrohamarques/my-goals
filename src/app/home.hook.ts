@@ -7,17 +7,19 @@ import dayjs from "dayjs";
 import type { GoalsProps } from "@/components/Goals/Goals";
 import type { TransactionsProps } from "@/components/Transactions/Transactions";
 
-import { mocks } from "@/utils/mocks";
+import { useGoalRepository } from "@/database/useGoalRepository";
+import { useTransactionRepository } from "@/database/useTransactionRepository";
 
 export function useHome() {
   const [transactions, setTransactions] = useState<TransactionsProps>([]);
   const [goals, setGoals] = useState<GoalsProps>([]);
 
-  // FORM
   const [name, setName] = useState("");
   const [total, setTotal] = useState("");
 
-  // BOTTOM SHEET
+  const { create, all } = useGoalRepository();
+  const { findLatest } = useTransactionRepository();
+
   const bottomSheetRef = useRef<Bottom>(null);
   const handleBottomSheetOpen = () => bottomSheetRef.current?.expand();
   const handleBottomSheetClose = () => bottomSheetRef.current?.snapToIndex(0);
@@ -34,7 +36,7 @@ export function useHome() {
         return Alert.alert("Erro", "Valor inválido.");
       }
 
-      console.log({ name, total: totalAsNumber });
+      create({ name, total: totalAsNumber });
 
       Keyboard.dismiss();
       handleBottomSheetClose();
@@ -42,6 +44,8 @@ export function useHome() {
 
       setName("");
       setTotal("");
+
+      fetchGoals();
     } catch (error) {
       Alert.alert("Erro", "Não foi possível cadastrar.");
       console.log(error);
@@ -50,7 +54,7 @@ export function useHome() {
 
   async function fetchGoals() {
     try {
-      const response = mocks.goals;
+      const response = all();
       setGoals(response);
     } catch (error) {
       console.log(error);
@@ -59,7 +63,7 @@ export function useHome() {
 
   async function fetchTransactions() {
     try {
-      const response = mocks.transactions;
+      const response = findLatest();
 
       setTransactions(
         response.map((item) => ({

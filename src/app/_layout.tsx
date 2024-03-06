@@ -6,7 +6,7 @@ import { Slot } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { SQLiteProvider } from 'expo-sqlite/next'
+import { SQLiteProvider } from "expo-sqlite/next";
 
 import { databaseInit } from "@/database/database-init";
 
