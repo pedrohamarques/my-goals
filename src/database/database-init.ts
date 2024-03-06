@@ -1,4 +1,4 @@
-import { SQLiteDatabase } from 'expo-sqlite/next'
+import { SQLiteDatabase } from "expo-sqlite/next";
 
 export async function databaseInit(database: SQLiteDatabase) {
   await database.execAsync(`
@@ -18,5 +18,5 @@ export async function databaseInit(database: SQLiteDatabase) {
       created_at DEFAULT CURRENT_TIMESTAMP
     );
 
-  `)
+  `);
 }
